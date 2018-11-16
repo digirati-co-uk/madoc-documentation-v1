@@ -7,10 +7,9 @@
   "license": "MIT",
   "scripts": {
     "start": "fesk-start",
-    "build": "fesk-build && npm run copy-public",
-    "copy-public": "cp -r ./public ./dist/public",
+    "build": "fesk-build",
     "watch": "fesk-watch",
-    "preview": "fesk-build && npm run copy-public && netlifyctl deploy --draft -P 'dist' -m 'Local deployment preview'"
+    "preview": "fesk-build && netlifyctl deploy --draft -P 'dist' -m 'Local deployment preview'"
   },
   "devDependencies": {
     "@fesk/scripts": "^1.1.3"
