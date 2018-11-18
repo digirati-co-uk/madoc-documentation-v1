@@ -2,6 +2,10 @@
   "title": "Madoc documentation",
   "menuMap": {
     "getting-started": "Getting started",
-    "iiif-content": "IIIF Content"
+    "iiif-content": "IIIF Content",
+    "multisite": "Multisite",
+    "crowdsourcing": "Crowdsourcing",
+    "customising-pages": "Customising pages",
+    "reference": "Reference"
   }
 }

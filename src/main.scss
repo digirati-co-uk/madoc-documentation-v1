@@ -26,3 +26,38 @@ body, html {
     color: #961E22;
   }
 }
+
+.fesk-menu {
+    position: fixed;
+    top: 100px;
+    width: 300px;
+    height: calc(100% - 100px);
+    overflow-y: auto;
+}
+.fesk-layout__menu {
+  display: none;
+  @media only screen and (min-width: 1024px) {
+    display: block;
+    min-width: 300px;
+  }
+  @media only screen and (max-width: 1023px) {
+    flex-basis: 100px !important;
+  }
+}
+.fesk-menu {
+  @media only screen and (max-width: 1023px) {
+    display: none;
+  }
+}
+.fesk-header {
+  @media only screen and (min-width: 1024px) {
+    position: fixed;
+    height: 100px;
+    width: 300px; 
+  }
+}
+
+h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
+  border-left: 3px solid orange;
+  padding-left: 10px;
+}
