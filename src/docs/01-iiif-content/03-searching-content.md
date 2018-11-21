@@ -25,6 +25,8 @@ You can add [custom RDF properties](/iiif-content/editing-content#custom-metadat
 
 In our custom modules, you can use this custom metadata to organise or tag your content and use search terms to populate IIIF search queries for the Manifest, Canvas and Collection list media blocks. These are found on [Site pages](/customising-pages/site-pages) and [IIIF Pages](/customising-pages/iiif-pages).
 
-You can experiement with this by simply using the search box on the default Omeka theme in the top right on any created site.
+<div class="fesk-info">
+    <strong>Note:</strong> Annotations are not stored in Omeka and are therefore not searchable in this UI.
+</div>
 
-*__Note:__ Annotations are not stored in Omeka and are therefore not searchable in this UI.*
+You can experiement with this by simply using the search box on the default Omeka theme in the top right on any created site.
