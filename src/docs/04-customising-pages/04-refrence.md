@@ -16,11 +16,15 @@ Allows you to set up a free text query to list a set amount of canvases and disp
 ### Canvas snippet
 Choose a canvas from the list and showcase a single canvas on the page.
 
+<img src="/img/canvas-snippet.png" width="367" />
+
 ### Manifest list
 Allows you to set up a free text query to list a set amount of manifests and display them on a page.
 
 ### Manifest snippet
 Choose a manifest from the list and showcase a single manifest on the page.
+
+<img src="/img/manifest-snippet.png" width="361" />
 
 ### Collection list
 Allows you to set up a free text query to list a set amount of collections and display them on a page.
@@ -30,3 +34,5 @@ Choose a collection from the list and showcase a single collection on the page.
 
 ### IIIF Metadata
 Can only be placed on a IIIF page (manifest or canvas) and offers an expanded view of the IIIF metadata associated with that resource.
+
+<img src="/img/metadata.png" />
