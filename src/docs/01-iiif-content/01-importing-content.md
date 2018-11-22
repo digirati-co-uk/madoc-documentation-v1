@@ -25,7 +25,7 @@ After importing a collection, you will be redirected to the created Omeka item. 
 
 One the main menu you will see a link "Create IIIF Manifest". Click on this button and it will take you to the normal Omeka item form, but with the Manifest resource template and `sc:Manifest` class pre-filled. The only required field is the *Manifest URI* at the bottom. In the URI text box enter the address of your IIIF manifest and hit *save* in the top right corner.
 
-When you import manifests, all of the embedded canvases will be added as Omeka items into the platform. 
+When you import manifests, all of the embedded canvases will be added as Omeka items into the platform.
 
 After importing a manifest, you will be redirected to the create Omeka item. Once all of the attached canvases are finished loading, you will be able to click on the button at the top above the item in Omeka to see the JSON representation of the imported content.
 
@@ -33,11 +33,15 @@ After importing a manifest, you will be redirected to the create Omeka item. Onc
 
 Canvases are not deferenced. But you can create one from scratch. To do this you will need the RDF property `dcterms:source` and paste in the JSON for that canvas. You will also have to add in a valid identifier in the Canvas URI field and optionally attach a IIIF tile source. Once created, this Canvas can be added to existing manifests. When manually adding a canvas to a manifest ensure you set up a link both ways. (`Manifest.sc:hasCanvases` and `Canvas.dcterms:isPartOf`)
 
+## Creating custom Collections
+
+You can also create custom collections from the UI. If you choose "Create collection" and do not enter a UI, then an empty Collection will be created for you. You can add manifests to this collection using the "sc:hasManifests" property and they will be visible inside both the JSON and on the website for your collection.
+
 ## Limitations
 
 The main limitation to our module is the inability to import multiple instances of the same content. Some content may be in an indetermined state if you import the same collection, manifest or canvas into the platform. You MAY be able to import the same IIIF content if they are added to different sites, but this is not officially supported in the platform.
 
-The second limitation is the size of image assets when generating thumbnails. This can cause 2 problems: 
+The second limitation is the size of image assets when generating thumbnails. This can cause 2 problems:
 
 * Huge amount of time to import
 * Crashing if memory or network issues occur
