@@ -34,4 +34,4 @@ $ docker-compose down
 
 ## System requirements
 
-We bundle a full annotation server into our distribution. You can change this in the `docker-compose.yaml` file if you need to. With the annotation server its recomendded to run this with at least `4Gb` or memory free.
+We bundle a full annotation server into our distribution. You can change this in the `docker-compose.yaml` file if you need to. With the annotation server its recomendded to run this with at least `4GB` or memory free.
