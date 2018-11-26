@@ -1,10 +1,16 @@
 ---
 title: Madoc documentation
-info: Some info in the top.
+info: This documentation is a continuing to improve as more areas of the platform are finalised.
 ---
 
 # Madoc documentation
 
-Start of documentation
+The madoc platform is built upon some core technologies.
 
-Second paragraph.
+* IIIF
+* Omeka
+* Annotation studio
+* Madoc vocabulary
+* W3C Annotations (Elucidate)
+
+It is used to enrich IIIF content with annotations and showcase IIIF content through Omeka websites.

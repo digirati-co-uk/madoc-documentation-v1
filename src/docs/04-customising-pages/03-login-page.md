@@ -1,6 +1,7 @@
 ---
 name: Login page
 order: 3
+warning: This functionality is not yet ready for production
 ---
 
 # Customising login page
