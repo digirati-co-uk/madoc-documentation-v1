@@ -7,7 +7,7 @@ order: 1
 Before you set up your platform, you will want to ensure that you change the default passwords.
 
 ## MySQL
-In the `madoc-platform` there is a file called `.env`, by default it will look something like:
+In the `madoc-example-config` there is a file called `.env`, by default it will look something like:
 
 ```
 # MySQL
@@ -15,18 +15,18 @@ MYSQL_DATABASE=omeka_s
 MYSQL_USER=omeka_s
 MYSQL_PASSWORD=Password123
 MYSQL_PORT=3306
+
+# Omeka
+APP_ENV=dev
+MAIN_SITE_DOMAIN=http://localhost:8898/
+ELUCIDATE_URL=example-annotation-server:8080
+ELUCIDATE_PUBLIC_DOMAIN=http://localhost:8898/
 ```
 
 You should change the password here to something secret and secure. 
 
 ## Omeka configuration
-For more advanced configurations, you may want to configure Omeka or our modules themselves using code. You can do this by voluming in a configuration file. In your `docker-compose.yml` you will see a line that has been commented out on line [insert-line].
-```
-    volumes:
-      - ./config/omeka-app/application.config.php:/srv/omeka/application/config/application.config.php
-```
-
-This will be available when you run `docker-compose up`. 
+For more advanced configurations, you may want to configure Omeka or our modules themselves using code. You can `COPY` in extra configuration files in the docker file in the example configuration.
 
 ### Adding Zend modules
 <div class="fesk-info fesk-info--warning">
@@ -54,7 +54,6 @@ This too is where you can add custom image-magic parameters. Full documentation 
 ```
 
 All thumbnail sizes are in pixels. If you put very large values here it will slow down the generation of IIIF thumbnails.
-
 
 ### Mount volume of modules
 You have 4 main options for using custom modules. You can ssh into the container and install the modules in place. This may not persist if you rebuild the images. You may be able to use `docker-compose commit` to save those changes. The second is to use volumes to individually volume modules into the module directory:

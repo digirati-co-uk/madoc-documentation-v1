@@ -36,3 +36,12 @@ Choose a collection from the list and showcase a single collection on the page.
 Can only be placed on a IIIF page (manifest or canvas) and offers an expanded view of the IIIF metadata associated with that resource.
 
 <img src="/img/metadata.png" />
+
+### Crowd sourcing banner
+Taken from the NLW crowd sourcing platform, this is a great heading for your sites with a large image, titles and description text to introduce your site along with a call to action to jump into the collection.
+
+### Top contributors
+A list of top contributors to your annotations. Lists peoples names along side the amount of annotations they've created.
+
+### Latest annotated images
+The newest images that have gone from no annotations to annotations in the platform. A way to have fresh content on your homepage or other pages to engage users.
