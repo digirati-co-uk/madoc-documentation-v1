@@ -37,13 +37,28 @@ Canvases are not deferenced. But you can create one from scratch. To do this you
 
 You can also create custom collections from the UI. If you choose "Create collection" and do not enter a UI, then an empty Collection will be created for you. You can add manifests to this collection using the "sc:hasManifests" property and they will be visible inside both the JSON and on the website for your collection.
 
-## Limitations
 
-The main limitation to our module is the inability to import multiple instances of the same content. Some content may be in an indetermined state if you import the same collection, manifest or canvas into the platform. You MAY be able to import the same IIIF content if they are added to different sites, but this is not officially supported in the platform.
+## Reimporting resources
 
-The second limitation is the size of image assets when generating thumbnails. This can cause 2 problems:
+- You can, per site, choose a capture model from a remote source (URL) instead of importing to Omeka.
+- You can also per site, configure if the site should use real IDs or Omeka id for IIIF resources, which is reflected in the targets of annotations
+- When you import the same manifest of collection into the system, it will give you an error saying its already in
+- When you import a collection that contains manifests already in the system, it will not re-import them and simply re-use them
+- When you import a manifest that contains canvases already in the system, it will not re-import them and re-use and link
+- When you import a manifest from a URL that does not match the `@id` of the resource, the URL is ignored and imported as the `@id`
+- When you import collections or manifests the JSON field stored containing non-CMS content is now much smaller as relationships have been removed.
 
-* Huge amount of time to import
-* Crashing if memory or network issues occur
+## Custom collections
+You can now create custom collections that only exist in Omeka to create groups of already imported resources and drive new sites from them. The process for creating a new collection is the same as importing, you simply do not add a URI to an external collection. You can add as many manifests to that collection as you need. These can be used just like any other collection in the system, it will even include a IIIF resource link, if you wanted to use it with external tools. In the future you may be able to create custom manifests and canvases too in a similar way. Note: using "original ids" as an option on a site may not work with custom collections as they do not have an original ID.
 
-There is no good way to recover after a failure at this point. If you do run into this issue you will have to go into the content management site and manually remove the content.
+## FAQ
+
+**If you import a collection/manifest that has been added to or modified (for example more images added to that manifest), will it just see that the manifest is already in the system and give you an error or will it add the new canvases to the existing ones?**
+
+*At the moment it will give you an error. The correct way to handle that case might be to have some "resync" functionality on the resource itself, to update the image list. What will work though, is if a manifest fundamentally changes, and you give it another ID, when you import it will re-use the existing canvases and only import the new ones or, alternatively, you can remove the manifest (which won't remove the canvases) and import the manifest again (it will have a different Omeka ID).*
+
+
+**Is there an option to delete all manifests and canvases tied to a collection?**
+
+*Not automatically no, but if you work from the inside out and run a query for canvases that have the field "isPartOf" equal to your manifest, and then from there you can use Omeka's bulk delete to remove the canvases, and finally then remove the manifest.*
+

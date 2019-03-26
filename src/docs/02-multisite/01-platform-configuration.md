@@ -38,3 +38,13 @@ You can [make a site private](/multisite/creating-new-site#publishing-your-site)
 ## Opening user registrations
 
 From the [Public User](/reference/modules/public-user) module you can toggle on or off user registrations, including the role that they are when they when they register.
+
+## Annotation configuration
+There are some new configuration options for configuring which annotation server on a per-site should be used. This was designed with migrations from previous annotation servers in mind, but you could use this to split your annotation servers down. Note that authentication will not be handled in this case. It was primarily designed for read-only access to the annotations.
+
+You can also choose a static capture model, this can be useful if you do not want to get stuck into how the crowd sourcing models are created and want to simply host one and serve it as JSON.
+
+## Original IDs
+You can, on a per-site basis, choose to use the original IDs of the underlying IIIF resources. This can be useful if you want to run crowd sourcing on existing content. This will ensure that annotation targets are for the original IIIF content and not the surrogates stored in Omeka. 
+
+## 

@@ -1,7 +1,7 @@
 ---
 name: Comments
 order: 3
-warning: This module is not configured to appear on IIIF pages by default.
+warning: This module is not maintained.
 ---
 
 # Comments
