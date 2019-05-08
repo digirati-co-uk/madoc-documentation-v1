@@ -12,6 +12,6 @@
     "preview": "fesk-build && netlifyctl deploy --draft -P 'dist' -m 'Local deployment preview'"
   },
   "devDependencies": {
-    "@fesk/scripts": "^1.1.3"
+    "@fesk/scripts": "^1.2.1"
   }
 }
