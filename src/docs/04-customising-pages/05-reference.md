@@ -1,6 +1,6 @@
 ---
 name: Block Reference
-order: 4
+order: 5
 ---
 
 # Block reference
